@@ -23,6 +23,11 @@ The following is a list of sorts that are implemented for analysis:
 * Radix Sort
 
 
+## SAMPLE RESULTS
+The following sample shows the performance of the algorithms for exponentially growing datasets.
+![Outcome](images/output.png)
+
+
 ## REFERENCES
 The following resources were used for information in the production of the project/report:
 * [Computing Bubble Sort Time Complexity](https://www.baeldung.com/cs/bubble-sort-time-complexity) by Subham Datta, 2020
