@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 #include "MaxHeap.h"
    using namespace std;
 
@@ -22,6 +23,7 @@ int rightChild (int i) {
 
 void maxHeapify (int A[], int heapSize, int i) {
 	int left, right, largest;
+
 	
 	left = leftChild(i);
 	right = rightChild(i);
@@ -38,20 +40,28 @@ void maxHeapify (int A[], int heapSize, int i) {
 		int temp = A[i];
 		A[i] = A[largest];
 		A[largest] = temp;
+		
+		
 		maxHeapify(A, heapSize, largest);
+		
 	}
 }
 
 
 
 void buildMaxHeap(int A[], int lengthA) {
-
 	int heapSize, i;
 	
+	
+		
 	heapSize = lengthA;
 	
+	
+	
 	for (i = (lengthA/2); i >= 1; i = i - 1)
-			maxHeapify(A, heapSize, i);
+		maxHeapify(A, heapSize, i);
+	
+	
 }
 
 
@@ -75,12 +85,16 @@ void heapSort (int A[], int lengthA) {
 	heapSize = lengthA;
 
 	buildMaxHeap(A, lengthA);
+	
+	
 		
 	for (i=lengthA; i >= 2; i = i - 1) {
 		int temp = A[1];
 		A[1] = A[i];
 		A[i] = temp;
 		heapSize = heapSize - 1;
+		
 		maxHeapify(A, heapSize, 1);
 	}
+	
 }

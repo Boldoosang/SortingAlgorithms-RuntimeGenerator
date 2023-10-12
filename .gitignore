@@ -1,1 +1,10 @@
 Documents/
+.vscode/
+*.pdf
+*.layout
+*.win
+*.o
+*.exe
+MaxHeap.o
+SortAlgorithms.o
+Sorting.o
